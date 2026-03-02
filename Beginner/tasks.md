@@ -36,10 +36,10 @@
 4. **[DONE] Shuffling:** Use `random.shuffle()` to reorder a list of tasks in place.
 5. **[DONE] Random Ranges:** Generate a random floating-point number between 1.0 and 10.0 using `random.uniform()`.
 6. **[DONE] Current Time:** Use `datetime.datetime.now()` to print the current date and time in a readable format.
-7. **Date Arithmetic:** Use `timedelta` to find out what the date will be exactly 100 days from today.
-8. **Parsing Dates:** Convert a string like "2026-12-25" into a Python `datetime` object.
-9. **Formatting Dates:** Print the current date in the format: "Friday, February 28, 2026".
-10. **The Birthday Countdown:** Build a script that asks for a birthday and calculates the days, hours, and minutes remaining.
+7. **[DONE] Date Arithmetic:** Use `timedelta` to find out what the date will be exactly 100 days from today.
+8. **[DONE] Parsing Dates:** Convert a string like "2026-12-25" into a Python `datetime` object.
+9. **[DONE] Formatting Dates:** Print the current date in the format: "Friday, February 28, 2026".
+10. **[DONE] The Birthday Countdown:** Build a script that asks for a birthday and calculates the days, hours, and minutes remaining.
 
 ## 7. PEP 8 & Code Style
 1. **Naming Audit:** Rename variables like `x`, `temp`, and `data1` in an old script to semantic names.

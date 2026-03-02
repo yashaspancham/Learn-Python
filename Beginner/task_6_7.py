@@ -21,3 +21,16 @@ I/O:
 # TODO: Get today's date using 'datetime.date.today()'.
 # TODO: Add 100 days using 'datetime.timedelta(days=100)'.
 # TODO: Print the resulting date.
+import datetime
+
+
+def solution() -> None:
+    """Get today'date then go 100 days to future."""
+    today: datetime.date = datetime.date.today()
+    print(f"today: {today}")
+    future: datetime.date = today + datetime.timedelta(days=100)
+    print(f"future: {future}")
+
+
+if __name__ == "__main__":
+    solution()
