@@ -12,30 +12,30 @@
 9. **[DONE] Difference vs Symmetric Difference:** Find items present in set A but not B, then items present in either A or B but not both.
 10. **[DONE] The Flashcard App:** Build a CLI tool where users are quizzed on dictionary keys. Use a set to track which questions they got wrong.
 11. **[DONE] Dictionary Comprehensions:** Create a dictionary of `{x: x**2}` for a range of 1 to 10.
-12. **Set Comprehensions:** Create a set of uppercase strings from a list of words, filtering for words longer than 3 characters.
-13. **Dictionary Merging:** Use the `|` merge operator (Python 3.9+) to combine two dictionaries into a third.
-14. **Nested Dictionaries:** Access and update a value inside a multi-level dictionary (e.g., a dictionary of users).
-15. **Sorting by Value:** Use the `sorted()` function with a `lambda` to sort a dictionary based on its values rather than its keys.
+12. **[DONE] Set Comprehensions:** Create a set of uppercase strings from a list of words, filtering for words longer than 3 characters.
+13. **[DONE] Dictionary Merging:** Use the `|` merge operator (Python 3.9+) to combine two dictionaries into a third.
+14. **[DONE] Nested Dictionaries:** Access and update a value inside a multi-level dictionary (e.g., a dictionary of users).
+15. **[DONE] Sorting by Value:** Use the `sorted()` function with a `lambda` to sort a dictionary based on its values rather than its keys.
 
 ## 2. Tuples & Slicing
-1. **Immutable Storage:** Create a tuple representing a fixed coordinate (x, y, z) and try to change one value (observe the error).
-2. **Tuple Unpacking:** Assign a tuple `(10, 20, 30)` to three variables `a, b, c` in a single line.
-3. **Basic Slicing:** Take the list `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]` and slice it to get `[2, 3, 4, 5]`.
-4. **Reverse Slicing:** Use a negative step slice `[::-1]` to reverse a string.
-5. **Step Slicing:** Extract every second element from a list using the `[start:stop:step]` syntax.
-6. **Last N Elements:** Use slicing to get the last 3 elements of any list, regardless of its length.
-7. **Tuple Concatenation:** Join two tuples together to create a third tuple.
-8. **Nested Slicing:** Create a list of lists and use slicing to get the first two sub-lists.
-9. **Search & Count:** Use `.index()` and `.count()` methods on a tuple of repeated values.
-10. **The Password Generator:** Write a script that takes a long string of characters and uses random slicing to pick pieces for a password.
+1. **[DONE] Immutable Storage:** Create a tuple representing a fixed coordinate (x, y, z) and try to change one value (observe the error).
+2. **[DONE] Tuple Unpacking:** Assign a tuple `(10, 20, 30)` to three variables `a, b, c` in a single line.
+3. **[DONE] Basic Slicing:** Take the list `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]` and slice it to get `[2, 3, 4, 5]`.
+4. **[DONE] Reverse Slicing:** Use a negative step slice `[::-1]` to reverse a string.
+5. **[DONE] Step Slicing:** Extract every second element from a list using the `[start:stop:step]` syntax.
+6. **[DONE] Last N Elements:** Use slicing to get the last 3 elements of any list, regardless of its length.
+7. **[DONE] Tuple Concatenation:** Join two tuples together to create a third tuple.
+8. **[DONE] Nested Slicing:** Create a list of lists and use slicing to get the first two sub-lists.
+9. **[DONE] Search & Count:** Use `.index()` and `.count()` methods on a tuple of repeated values.
+10. **[DONE] The Password Generator:** Write a script that takes a long string of characters and uses random slicing to pick pieces for a password.
 
 ## 6. Standard Library (`math`, `random`, `datetime`)
-1. **Rounding & Power:** Use `math.ceil()`, `math.floor()`, and `math.pow()` to manipulate user input numbers.
-2. **Constants:** Print the value of `pi` and `e` using the `math` module.
-3. **Random Choice:** Use `random.choice()` to pick a random name from a list.
-4. **Shuffling:** Use `random.shuffle()` to reorder a list of tasks in place.
-5. **Random Ranges:** Generate a random floating-point number between 1.0 and 10.0 using `random.uniform()`.
-6. **Current Time:** Use `datetime.datetime.now()` to print the current date and time in a readable format.
+1. **[DONE] Rounding & Power:** Use `math.ceil()`, `math.floor()`, and `math.pow()` to manipulate user input numbers.
+2. **[DONE] Constants:** Print the value of `pi` and `e` using the `math` module.
+3. **[DONE] Random Choice:** Use `random.choice()` to pick a random name from a list.
+4. **[DONE] Shuffling:** Use `random.shuffle()` to reorder a list of tasks in place.
+5. **[DONE] Random Ranges:** Generate a random floating-point number between 1.0 and 10.0 using `random.uniform()`.
+6. **[DONE] Current Time:** Use `datetime.datetime.now()` to print the current date and time in a readable format.
 7. **Date Arithmetic:** Use `timedelta` to find out what the date will be exactly 100 days from today.
 8. **Parsing Dates:** Convert a string like "2026-12-25" into a Python `datetime` object.
 9. **Formatting Dates:** Print the current date in the format: "Friday, February 28, 2026".

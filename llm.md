@@ -9,7 +9,7 @@ The user (Yashas, see: www.yashas-dev.com) aims to achieve **mastery of Python**
 - **`Roadmap/`**: Tiered roadmaps from Beginner to God.
 - **`Projects/projects.md`**: 100 domain-specific projects.
 - **Current Status**: Working through `Beginner/tasks.md`.
-- **Active Task**: Task 1.12 (Set Comprehensions) in `Beginner/task_1_12.py`.
+- **Active Task**: Task 6.7 (Date Arithmetic) in `Beginner/task_6_7.py`.
 
 ## Operational Instructions
 1. **Strict Style Enforcement:** Any code that does not strictly follow `style-guide.md` is considered **incorrect**. You MUST flag style violations as errors.
