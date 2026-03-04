@@ -1,6 +1,6 @@
 # Master Project List
 
-## Beginner Tier (20 Projects)
+## Beginner Tier (25 Projects)
 
 ### Cloud (AWS/Azure/GCP)
 1. **S3 File Uploader:** Script to upload a local file to an S3 bucket using Boto3.
@@ -30,7 +30,14 @@
 19. **Keyword Chatbot:** A rule-based bot that identifies intent using string matching.
 20. **Handwritten Digit Visualizer:** Use `matplotlib` to display images from the MNIST dataset.
 
-## Intermediate Tier (20 Projects)
+### Finance & Quant (Basics)
+21. **Stock Price Fetcher:** Fetch real-time stock prices from a public API and display gain/loss.
+22. **Loan Amortization Table:** Calculate and print a full monthly payment schedule for a loan.
+23. **Budget Analyzer:** Read a CSV of expenses, categorize them, and print a spending summary.
+24. **Portfolio Value Tracker:** Track the current value of a stock portfolio defined in a JSON file.
+25. **Compound Interest Calculator:** Compare investment growth across different compounding periods.
+
+## Intermediate Tier (25 Projects)
 
 ### Cloud (AWS/Azure/GCP)
 1. **Serverless CRUD API:** Build a Lambda-based task manager using Boto3 and DynamoDB.
@@ -60,7 +67,14 @@
 19. **News Article Summarizer:** Build a tool to extract key sentences from text using `NLTK` or `SpaCy`.
 20. **Stock Price Predictor:** Use `Pandas` and `Scikit-learn` to build a basic time-series forecast model.
 
-## Advanced Tier (20 Projects)
+### Finance & Quant (Intermediate)
+16. **Algorithmic Trading Backtester:** Test a simple moving average crossover strategy on historical price data.
+17. **Options Pricing Model:** Implement the Black-Scholes formula to price European call and put options.
+18. **Risk Metrics Calculator:** Compute VaR, Sharpe Ratio, and Max Drawdown from a daily returns series.
+19. **Financial Report Parser:** Extract key metrics (EPS, revenue) from SEC 10-K HTML filings using `BeautifulSoup`.
+20. **Order Book Simulator:** Simulate a basic limit order book with a price-time priority matching engine.
+
+## Advanced Tier (25 Projects)
 
 ### Cloud (AWS/Azure/GCP)
 1. **Multi-Cloud Inventory Aggregator:** Use `asyncio` to fetch and unify resources from AWS, GCP, and Azure simultaneously.
@@ -90,7 +104,14 @@
 19. **RL Agent for Gaming:** Use Reinforcement Learning (Q-Learning) to train a bot that plays a custom text-based game.
 20. **Model Compression Suite:** Implement weight pruning and quantization algorithms to shrink a model's memory footprint.
 
-## Ultra Tier (20 Projects)
+### Finance & Quant (Advanced)
+16. **Real-Time Market Data Pipeline:** Stream and normalize tick data from a WebSocket feed using `asyncio`.
+17. **Monte Carlo Portfolio Optimizer:** Use simulation to plot the efficient frontier and find the max Sharpe portfolio.
+18. **Pairs Trading Engine:** Statistical arbitrage strategy using cointegration tests and z-score entry/exit signals.
+19. **Tick Data Aggregator:** Aggregate raw trade ticks into OHLCV bars at arbitrary resolutions with microsecond accuracy.
+20. **Sentiment-Driven Signal Generator:** NLP pipeline on financial news headlines to produce long/short trading signals.
+
+## Ultra Tier (25 Projects)
 
 ### Cloud (High Performance & Scale)
 1.  **Custom Load Balancer:** Cython-optimized Layer 7 load balancer handling 10k req/s using `uvloop`.
@@ -120,7 +141,14 @@
 19. **Federated Learning System:** Encrypted gradient aggregation protocol across unreliable nodes.
 20. **Genetic Algorithm Hypervisor:** Evolution strategy that modifies its own code/architecture (AST manipulation).
 
-## God Tier (20 Projects)
+### Finance & Quant (Ultra)
+16. **Custom FIX Protocol Engine:** Implement a FIX 4.2 session and message layer for low-latency order routing.
+17. **Lock-Free Order Book (LMAX):** Cache-optimized matching engine using ring buffers and zero-allocation design.
+18. **Real-Time Risk Engine:** Sub-millisecond PnL and Greeks calculation across a portfolio using Cython and NumPy.
+19. **Alpha Factor Research Platform:** Framework to research, rank, and combine alpha signals across thousands of instruments.
+20. **Distributed Backtesting Cluster:** Multi-process engine with vectorized strategy evaluation across decades of tick data.
+
+## God Tier (25 Projects)
 
 ### Cloud & Distributed Systems (Planetary Scale)
 1.  **Global Distributed Database:** Spanner-like database with true external consistency using atomic clocks logic.
@@ -149,3 +177,10 @@
 18. **Probabilistic Programming Language:** A DSL for Bayesian inference (like Stan/PyMC3) with custom sampling steps.
 19. **Neuromorphic Chip Simulator:** Simulate Spiking Neural Networks (SNNs) modeling biological neuron behavior.
 20. **AI Code Compiler:** A model that compiles natural language directly into optimized Python bytecode (skipping source).
+
+### Finance & Quant (God)
+21. **Full Exchange Matching Engine:** Production-grade exchange with all order types, clearing, and settlement logic.
+22. **ML Alpha Generator:** Deep RL agent that learns raw order book features and outputs actionable trading signals.
+23. **Custom Financial Time-Series DB:** Columnar storage engine optimized for OHLCV and tick data with custom indexing.
+24. **Decentralized Exchange (DEX):** On-chain AMM with Python smart contract logic, LP mechanics, and arbitrage bot.
+25. **Systemic Risk Simulator:** Agent-based model simulating financial contagion across a network of interconnected institutions.
