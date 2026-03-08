@@ -3,8 +3,8 @@
 ## Beginner Tier (25 Projects)
 
 ### Cloud (AWS/Azure/GCP)
-1. **S3 File Uploader:** Script to upload a local file to an S3 bucket using Boto3.
-2. **EC2 Instance Lister:** Program to list all running cloud instances and their IDs.
+1. **S3 File Uploader:** Script to upload a local file to an S3 bucket using Boto3. [Done]
+2. **EC2 Instance Lister:** Program to list all running cloud instances and their IDs. [Done]
 3. **IAM User Auditor:** List all IAM users and their last login dates.
 4. **Cloud Storage Space Checker:** Script to report the total size of a cloud bucket.
 5. **Static Site Deployer:** Automate uploading a `dist/` folder to a static website host.
