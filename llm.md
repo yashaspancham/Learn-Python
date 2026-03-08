@@ -9,8 +9,8 @@ The user (Yashas, see: www.yashas-dev.com) aims to achieve **mastery of Python**
 - **`Roadmap/`**: Tiered roadmaps from Beginner to God.
 - **`Projects/projects.md`**: 100 domain-specific projects.
 - **Current Status**: Beginner tasks mostly done. Skipped Section 7 (PEP 8 & Code Style) for now. Moved to Projects.
-- **Completed Projects**: Cloud Project 1 (S3 File Uploader), Cloud Project 2 (EC2 Instance Lister).
-- **Active Task**: Cloud Project 3 (IAM User Auditor) — next in the list.
+- **Completed Projects**: Cloud Project 1 (S3 File Uploader), Cloud Project 2 (EC2 Instance Lister), Cloud Project 3 (IAM User Auditor).
+- **Active Task**: Cloud Project 4 (Cloud Storage Space Checker).
 - **Completed Beginner Tasks**: All of Section 1, 2, and 6 (6.1–6.10). Section 7 skipped.
 - **Next After Project**: Resume Section 7 (PEP 8 & Code Style) or continue with Cloud Project 3.
 

@@ -55,3 +55,96 @@
 #       if --never-logged, filter users where PasswordLastUsed is missing
 #       formats and prints each user
 #       handles ClientError and empty list
+"""Lists all users"""
+
+
+import argparse
+import sys
+import boto3
+from botocore.exceptions import ClientError
+
+
+def never_logged_users(users: list[dict]) -> list[dict]:
+        """Filters users who never loggedin.
+        
+        Args: 
+                users: List all the users.
+        
+        Returns: List of users who never loggedin.
+        """
+        never_logged_users_list: list[dict] = []
+        for user in users:
+                if user.get("PasswordLastUsed") is None:
+                        never_logged_users_list.append(user)
+        return never_logged_users_list
+
+
+def list_users(client: 'botocore.client.IAM', never_logged_flag: bool) -> list[dict]:
+        """Lists users based on never_logged_flag.
+        
+        Args:
+                client: boto3's IAM class.
+                never_logged_flag: flag for --never-logged.
+        
+        Returns: List of users.
+        """
+        response = client.list_users()
+        if never_logged_flag:
+                return never_logged_users(response["Users"])
+        else:
+                return response["Users"]
+
+
+def format_user(users: list[dict]) -> list[str]:
+        """Converts the list of users to list of users in the required format.
+        
+        Args:
+                users: List of users.
+        
+        Returns: List of users in the required format.
+        """
+        format_user_list: list[str] = []
+        for user in users:
+                user_name: str = user["UserName"]
+                user_creation_date: str = user["CreateDate"].strftime("%Y-%m-%d")
+                user_last_password_used: str = user["PasswordLastUsed"].strftime("%Y-%m-%d") if user.get("PasswordLastUsed") else "Never"
+                format_user_list.append(f"{user_name}\t{user_creation_date}\t{user_last_password_used}")
+        return format_user_list
+
+
+def parse_arguments() -> bool:
+        """Get arguments as input.
+        
+        Args: None => reads from arguments with argparse.
+
+        Returns: Flag for --never-logged.
+        """
+        cli_parser = argparse.ArgumentParser(
+                prog = "python3 main.py",
+                description = "List users and last login."
+        )
+        cli_parser.add_argument("--never-logged", action="store_true", help="list users who never logged-in.")
+        args = cli_parser.parse_args()
+
+        return args.never_logged
+
+
+def main() -> None:
+        """Prints all the users in a required format."""
+        never_logged_flag: bool = parse_arguments()
+        client = boto3.client("iam")
+        users = list_users(client, never_logged_flag)
+        if not users:
+                print("No users found.")
+                sys.exit(0)
+        users_format = format_user(users)
+        for user in users_format:
+                print(user)
+
+
+if __name__ == "__main__":
+        try:
+                main()
+        except ClientError as e:
+                print(e, file=sys.stderr)
+                sys.exit(1)
