@@ -60,3 +60,88 @@
 #       calls parse_args and get_bucket_stats
 #       prints bucket name, object count, and formatted size
 #       handles ClientError and empty bucket
+
+"""Obtain bucket size."""
+
+import argparse
+import sys
+import boto3
+from botocore.exceptions import ClientError
+
+
+def parse_args() -> tuple[str, str]:
+        """Get arguments as input.
+
+        Args: None => reads from arguments with argparse.
+
+        Returns: Bucket name and optionally an object name. 
+        """
+        cli_parser = argparse.ArgumentParser(
+                prog = "python3 main.py",
+                description = "s3 bucket size"
+        )
+        cli_parser.add_argument("--bucket", required=True, help="get bucket name")
+        cli_parser.add_argument("--prefix", default="", help="get object name")
+        args = cli_parser.parse_args()
+        return args.bucket, args.prefix
+
+
+def get_bucket_stats(bucket: str, prefix: str) -> tuple[int, int]:
+        """Returns total bucket size and total object count.
+        
+        Args:
+                bucket: The given s3 bucket.
+                prefix: The key for a particular object.
+        
+        Returns: Total object count and bucket size 
+        """
+        client = boto3.client("s3")
+        paginator = client.get_paginator("list_objects_v2")
+        pages = paginator.paginate(Bucket=bucket, Prefix=prefix)
+        s3_objects: list[dict] = []
+        for page in pages:
+                s3_objects.extend(page.get("Contents", []))
+        object_count: int = len(s3_objects)
+        bucket_size: int = 0
+        for s3_object in s3_objects:
+                bucket_size += s3_object["Size"]
+        return object_count, bucket_size
+
+
+def format_size(bucket_size: int) -> str:
+        """Converts the stats into required output format.
+        
+        Args:
+                bucket_size: Total bucket size.
+
+        Returns: The size in required format.
+        """
+        size: str = ""
+        if bucket_size < 1024:
+                size = f"{bucket_size} B"
+        elif bucket_size < (1024 ** 2):
+                size = f"{(bucket_size / 1024):.2f} KB"
+        elif bucket_size < 1024 ** 3:
+                size = f"{(bucket_size / 1024 ** 2):.2f} MB"
+        else:
+                size = f"{(bucket_size / 1024 ** 3):.2f} GB"
+        return size
+
+
+def main() -> None:
+        """Returns total objects count and total size."""
+        bucket, prefix = parse_args()
+        try:
+                object_count, bucket_size = get_bucket_stats(bucket, prefix)
+                if object_count == 0:
+                        print("Bucket is empty.")
+                        sys.exit(0)
+        except ClientError as Error:
+                print(f"ClientError: {Error}", file=sys.stderr)
+                sys.exit(1)
+        bucket_size_formatted: str = format_size(bucket_size)
+        print(f"Bucket: {bucket}\nObjects: {object_count}\nSize: {bucket_size_formatted}")
+
+
+if __name__ == "__main__":
+        main()
